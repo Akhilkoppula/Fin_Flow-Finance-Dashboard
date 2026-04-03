@@ -1,0 +1,122 @@
+/* ─── CSS VARIABLES & RESET ─── */
+:root {
+  --bg:         #0b0e17;
+  --surface:    #131728;
+  --surface2:   #1a2035;
+  --border:     rgba(255,255,255,0.07);
+  --gold:       #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim:   rgba(201,168,76,0.15);
+  --text:       #e8e6e0;
+  --text-muted: #7a7f94;
+  --text-dim:   #4a4f64;
+  --green:      #4ade80;
+  --green-dim:  rgba(74,222,128,0.12);
+  --red:        #f87171;
+  --red-dim:    rgba(248,113,113,0.12);
+  --blue:       #60a5fa;
+  --blue-dim:   rgba(96,165,250,0.12);
+  --purple:     #a78bfa;
+  --shadow:     0 8px 32px rgba(0,0,0,0.4);
+  --radius:     16px;
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html  { scroll-behavior: smooth; }
+body  {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-size: 14px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: var(--surface); }
+::-webkit-scrollbar-thumb  { background: var(--gold-dim); border-radius: 4px; }
+
+/* ─── APP LAYOUT ─── */
+.app   { display: flex; min-height: 100vh; }
+.main  { margin-left: 240px; flex: 1; display: flex; flex-direction: column; }
+
+/* ─── CONTENT AREA ─── */
+.content { padding: 28px 32px; flex: 1; }
+
+/* ─── TABS ─── */
+.tabs {
+  display: flex; gap: 4px; margin-bottom: 28px;
+  background: var(--surface); border-radius: 12px;
+  padding: 4px; width: fit-content;
+}
+.tab {
+  padding: 8px 20px; border-radius: 8px; cursor: pointer;
+  font-size: 13px; font-weight: 500; color: var(--text-muted);
+  transition: all var(--transition); border: none;
+  background: transparent; font-family: 'DM Sans', sans-serif;
+}
+.tab.active { background: var(--gold); color: #0b0e17; font-weight: 600; }
+.tab:hover:not(.active) { color: var(--text); }
+
+/* ─── ROLE BANNER ─── */
+.role-banner {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--gold-dim);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 10px; padding: 10px 16px; margin-bottom: 20px;
+  font-size: 12.5px; color: var(--gold-light);
+  animation: fadeUp 0.3s ease both;
+}
+.role-banner.viewer {
+  background: var(--blue-dim);
+  border-color: rgba(96,165,250,0.2);
+  color: var(--blue);
+}
+
+/* ─── TOAST ─── */
+.toast {
+  position: fixed; bottom: 24px; right: 24px;
+  background: var(--surface2); border: 1px solid var(--gold);
+  border-radius: 10px; padding: 12px 18px;
+  font-size: 13px; color: var(--text);
+  transform: translateY(20px); opacity: 0;
+  transition: all 0.3s ease; z-index: 300;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── LIGHT MODE ─── */
+body.light {
+  --bg:       #f4f3ef;
+  --surface:  #ffffff;
+  --surface2: #f0ede8;
+  --border:   rgba(0,0,0,0.08);
+  --text:     #1a1a2e;
+  --text-muted: #6b7280;
+  --text-dim:   #9ca3af;
+  --shadow:   0 8px 32px rgba(0,0,0,0.08);
+}
+body.light .topbar { background: rgba(244,243,239,0.9); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .main { margin-left: 0; }
+  .hamburger { display: block; }
+  .content { padding: 20px 16px; }
+  table th:nth-child(5), table td:nth-child(5) { display: none; }
+}
+@media (max-width: 600px) {
+  .cards-grid { grid-template-columns: 1fr 1fr; }
+  table th:nth-child(4), table td:nth-child(4) { display: none; }
+  .tx-search { width: 140px; }
+}

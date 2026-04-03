@@ -1,0 +1,64 @@
+/* ─── SIDEBAR ─── */
+.sidebar {
+  width: 240px; flex-shrink: 0;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  padding: 28px 0;
+  position: fixed; top: 0; left: 0; height: 100vh;
+  z-index: 100;
+  transition: transform var(--transition);
+}
+
+.sidebar-logo {
+  padding: 0 24px 28px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+}
+.logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 700;
+  color: var(--gold); letter-spacing: 0.5px;
+}
+.logo-sub {
+  font-size: 11px; color: var(--text-muted);
+  letter-spacing: 2px; text-transform: uppercase; margin-top: 2px;
+}
+
+.nav-section-label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-dim); padding: 0 24px 8px; margin-top: 8px;
+}
+
+.nav-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 11px 24px; cursor: pointer;
+  color: var(--text-muted); font-size: 13.5px; font-weight: 500;
+  transition: all var(--transition);
+  border-left: 3px solid transparent;
+}
+.nav-item:hover  { color: var(--text); background: rgba(255,255,255,0.03); }
+.nav-item.active { color: var(--gold); border-left-color: var(--gold); background: var(--gold-dim); }
+.nav-item svg    { width: 17px; height: 17px; flex-shrink: 0; }
+
+.sidebar-bottom {
+  margin-top: auto; padding: 20px 24px;
+  border-top: 1px solid var(--border);
+}
+
+.role-switcher {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 10px; padding: 12px;
+}
+.role-label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-dim); margin-bottom: 8px;
+}
+.role-select {
+  width: 100%; background: transparent; border: none;
+  color: var(--gold); font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 600; cursor: pointer; outline: none;
+  -webkit-appearance: none;
+}
+.role-select option { background: var(--surface2); color: var(--text); }

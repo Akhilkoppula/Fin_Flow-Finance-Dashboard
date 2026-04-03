@@ -1,0 +1,37 @@
+/* ─── TOPBAR ─── */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 32px; border-bottom: 1px solid var(--border);
+  background: rgba(11,14,23,0.8); backdrop-filter: blur(12px);
+  position: sticky; top: 0; z-index: 50;
+}
+.topbar-left h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600; color: var(--text);
+}
+.topbar-left p { font-size: 12px; color: var(--text-muted); margin-top: 1px; }
+
+.topbar-right { display: flex; align-items: center; gap: 12px; }
+
+.dark-toggle {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 8px; padding: 7px 12px; cursor: pointer;
+  font-size: 12px; color: var(--text-muted);
+  transition: all var(--transition);
+}
+.dark-toggle:hover { border-color: var(--gold-light); color: var(--gold-light); }
+
+.export-btn {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--gold); color: #0b0e17;
+  border: none; border-radius: 8px; padding: 8px 14px;
+  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all var(--transition);
+}
+.export-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+.hamburger {
+  display: none; background: none; border: none;
+  color: var(--text); cursor: pointer; padding: 6px;
+}

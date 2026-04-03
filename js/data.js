@@ -1,0 +1,36 @@
+// ─── CONSTANTS ───
+const CATEGORY_COLORS = {
+  Food:          '#f87171',
+  Transport:     '#fb923c',
+  Shopping:      '#facc15',
+  Entertainment: '#a78bfa',
+  Healthcare:    '#34d399',
+  Utilities:     '#60a5fa',
+  Salary:        '#4ade80',
+  Freelance:     '#38bdf8',
+  Investment:    '#c084fc',
+  Other:         '#94a3b8',
+};
+
+const SEED_TRANSACTIONS = [
+  { id:1,  desc:'Monthly Salary',     amount:85000, type:'income',  category:'Salary',        date:'2024-03-01' },
+  { id:2,  desc:'Freelance Project',  amount:22000, type:'income',  category:'Freelance',     date:'2024-03-05' },
+  { id:3,  desc:'Apartment Rent',     amount:18000, type:'expense', category:'Utilities',     date:'2024-03-02' },
+  { id:4,  desc:'Grocery Shopping',   amount:4200,  type:'expense', category:'Food',          date:'2024-03-08' },
+  { id:5,  desc:'Metro Card',         amount:600,   type:'expense', category:'Transport',     date:'2024-03-10' },
+  { id:6,  desc:'Amazon Purchase',    amount:3100,  type:'expense', category:'Shopping',      date:'2024-03-12' },
+  { id:7,  desc:'Netflix & Spotify',  amount:1100,  type:'expense', category:'Entertainment', date:'2024-03-15' },
+  { id:8,  desc:'Doctor Visit',       amount:900,   type:'expense', category:'Healthcare',    date:'2024-03-17' },
+  { id:9,  desc:'Monthly Salary',     amount:85000, type:'income',  category:'Salary',        date:'2024-02-01' },
+  { id:10, desc:'Electricity Bill',   amount:2800,  type:'expense', category:'Utilities',     date:'2024-02-05' },
+  { id:11, desc:'Restaurant Dinner',  amount:2200,  type:'expense', category:'Food',          date:'2024-02-14' },
+  { id:12, desc:'Investment Returns', amount:8500,  type:'income',  category:'Investment',    date:'2024-02-20' },
+  { id:13, desc:'Cab Rides',          amount:1400,  type:'expense', category:'Transport',     date:'2024-02-22' },
+  { id:14, desc:'Monthly Salary',     amount:85000, type:'income',  category:'Salary',        date:'2024-01-01' },
+  { id:15, desc:'New Clothes',        amount:5500,  type:'expense', category:'Shopping',      date:'2024-01-18' },
+  { id:16, desc:'Gym Membership',     amount:2000,  type:'expense', category:'Healthcare',    date:'2024-01-20' },
+  { id:17, desc:'Freelance Work',     amount:15000, type:'income',  category:'Freelance',     date:'2024-01-25' },
+  { id:18, desc:'Food Delivery',      amount:3800,  type:'expense', category:'Food',          date:'2024-03-20' },
+  { id:19, desc:'Phone Bill',         amount:799,   type:'expense', category:'Utilities',     date:'2024-03-22' },
+  { id:20, desc:'OTT Subscriptions',  amount:899,   type:'expense', category:'Entertainment', date:'2024-03-24' },
+];
