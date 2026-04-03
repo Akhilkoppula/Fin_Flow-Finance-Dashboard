@@ -5,8 +5,8 @@
 ---
 
 ## 🚀 Live Demo & Repository
-* **🌐 Live Deployment:** [PASTE_YOUR_VERCEL_URL_HERE]
-* **💻 GitHub Repository:** [PASTE_YOUR_GITHUB_URL_HERE]
+* **🌐 Live Deployment:** https://finflowfinance-fashboard.vercel.app
+* **💻 GitHub Repository:** https://github.com/Akhilkoppula/Fin_Flow-Finance-Dashboard
 
 ---
 
